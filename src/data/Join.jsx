@@ -8,7 +8,6 @@ function Join() {
   const [image, setImage] = useState();
   const [selectedFile, setSelectedFile] = useState(null);
   const handleFileChange = (e) => {
-    localStorage.setItem("image", e.target.files[0].name);
     setImage(e.target.files[0].name);
     setSelectedFile(e.target.files[0]);
   };
@@ -23,13 +22,13 @@ function Join() {
       console.log(formData, selectedFile);
       formData.append("image", selectedFile);
 
-      fetch("https://lastchat-ef8b.onrender.com/upload", {
+      fetch("https://chaat-cprl.onrender.com/upload", {
         method: "POST",
         body: formData,
       })
         .then((response) => response.text())
         .then((data) => {
-          setImage(data.image);
+          localStorage.setItem("image", data.image);
         })
         .catch((error) => {
           console.error("Error:", error);

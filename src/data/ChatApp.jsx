@@ -27,7 +27,7 @@ function ChatApp() {
   }, [name, file]);
 
   useEffect(() => {
-    const socket = io("https://lastchat-ef8b.onrender.com/");
+    const socket = io("https://chaat-cprl.onrender.com/uploads");
 
     socket.emit("newuser-join", {
       name: localStorage.getItem("name"),
@@ -47,7 +47,7 @@ function ChatApp() {
                   </p>
                 </div>
                 <div class="col-3">
-                  <img src="https://chatt-n20s.onrender.com/${data.image}" alt="" />
+                  <img src="https://chaat-cprl.onrender.com/uploads/${data.image}" alt="" />
                 </div>
               </div>
             </h6>
@@ -70,7 +70,7 @@ function ChatApp() {
                 </p>
               </div>
               <div class="col-3">
-                <img src="https://chatt-n20s.onrender.com/${data.image}" alt="" />
+                <img src="https://chaat-cprl.onrender.com/uploads/${data.image}" alt="" />
               </div>
             </div>
           </h6>
@@ -92,7 +92,7 @@ function ChatApp() {
                   </p>
                 </div>
                 <div class="col-3">
-                  <img src="https://chatt-n20s.onrender.com/${data.image}" alt="" />
+                  <img src="https://chaat-cprl.onrender.com/uploads/${data.image}" alt="" />
                 </div>
               </div>
             </h6>
@@ -118,7 +118,7 @@ function ChatApp() {
             </p>
           </div>
           <div class="col-3">
-            <img src="https://chatt-n20s.onrender.com/${file}" alt="" />
+            <img src="https://chaat-cprl.onrender.com/uploads/${file}" alt="" />
           </div>
         </div>
       </h6>
@@ -166,7 +166,7 @@ function ChatApp() {
                     </div>
                     <div className="col-3">
                       <img
-                        src={`https://chatt-n20s.onrender.com/${file}`}
+                        src={`https://chaat-cprl.onrender.com/uploads/${file}`}
                         alt=""
                       />
                     </div>

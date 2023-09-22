@@ -166,7 +166,7 @@ function ChatApp() {
                     </div>
                     <div className="col-3">
                       <img
-                        src={`https://chatt-n20s.onrender.com/${file}`}
+                        src={`https://chatt-n20s.onrender.com/download%20(4).jpg`}
                         alt=""
                       />
                     </div>

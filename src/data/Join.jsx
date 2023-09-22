@@ -23,7 +23,7 @@ function Join() {
       console.log(formData, selectedFile);
       formData.append("image", selectedFile);
 
-      fetch("https://chatya.onrender.com//upload", {
+      fetch("https://chatya.onrender.com/upload", {
         method: "POST",
         body: formData,
       })

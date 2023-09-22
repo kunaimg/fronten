@@ -93,7 +93,7 @@ h6 p {
     border: black solid 0.5px;
     z-index: 1;
     width: 15rem;
-    padding: 1.5rem 0.5rem;
+    // padding: 1.5rem 0.5rem;
     text-align: left;
     margin-top: 0.7rem;
 
@@ -112,7 +112,7 @@ h6 p {
     border: black solid 0.5px;
     z-index: 1;
     width: 15rem;
-    padding: 1.5rem 0.5rem;
+    // padding: 1.5rem 0.5rem;
     text-align: left;
     margin-top: 0.7rem;
     display: inline-block;
@@ -132,5 +132,10 @@ h6 p {
 
     // bottom: 2rem;
     background-color: whitesmoke;
+  }
+  .boxes {
+    height: 40rem;
+
+    overflow-y: scroll;
   }
 }

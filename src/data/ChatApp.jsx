@@ -47,7 +47,7 @@ function ChatApp() {
                   </p>
                 </div>
                 <div class="col-3">
-                  <img src="./${data.image}" alt="" />
+                  <img src="https://chatt-n20s.onrender.com/${data.image}" alt="" />
                 </div>
               </div>
             </h6>
@@ -70,7 +70,7 @@ function ChatApp() {
                 </p>
               </div>
               <div class="col-3">
-                <img src="./${data.image}" alt="" />
+                <img src="https://chatt-n20s.onrender.com/${data.image}" alt="" />
               </div>
             </div>
           </h6>
@@ -92,7 +92,7 @@ function ChatApp() {
                   </p>
                 </div>
                 <div class="col-3">
-                  <img src="./${data.image}" alt="" />
+                  <img src="https://chatt-n20s.onrender.com/${data.image}" alt="" />
                 </div>
               </div>
             </h6>
@@ -118,7 +118,7 @@ function ChatApp() {
             </p>
           </div>
           <div class="col-3">
-            <img src="./${file}" alt="" />
+            <img src="https://chatt-n20s.onrender.com/${file}" alt="" />
           </div>
         </div>
       </h6>
@@ -165,7 +165,10 @@ function ChatApp() {
                       </p>
                     </div>
                     <div className="col-3">
-                      <img src={`./${file}`} alt="" />
+                      <img
+                        src={`https://chatt-n20s.onrender.com/${file}`}
+                        alt=""
+                      />
                     </div>
                   </div>
                 </h6>

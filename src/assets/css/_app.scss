@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.chat .container {
+  background-color: whitesmoke;
+  height: 90vh;
+  width: 90vw;
+  margin-top: 2rem;
+  position: relative;
+}
+.chat .box1 {
+  text-align: right;
+}
+.chat .box1 h6 {
+  border: black solid 0.5px;
+  z-index: 1;
+
+  width: 20rem;
+  padding: 2rem 0.7rem;
+  text-align: left;
+  margin-top: 0.7rem;
+  display: inline-block;
+}
+.chat .box2 {
+  text-align: left;
+}
+.chat .box2 h6 {
+  border: black solid 0.5px;
+  z-index: 1;
+  width: 20rem;
+  padding: 2rem 0.7rem;
+  text-align: left;
+  margin-top: 0.7rem;
+  display: inline-block;
+}
+.textfield {
+  position: absolute;
+  z-index: 99;
+
+  bottom: 0;
+  background-color: whitesmoke;
+}
+.idwork {
+  margin-top: 8rem;
+}
+
+img {
+  height: 2.5rem;
+  border-radius: 50%;
+  width: 2.5rem;
+}
+h6 p {
+  margin-top: 0.6rem;
+}
+.boxes {
+  height: 27rem;
+
+  overflow-y: scroll;
+}
+::-webkit-scrollbar {
+  width: 0.3rem;
+}
+::-webkit-scrollbar-track {
+  background-color: whitesmoke;
+}
+.col-9 {
+  width: 70%;
+}
+.col-12 {
+  position: relative;
+}
+.main {
+  position: sticky;
+  left: 50%;
+  top: 0.1%;
+  background-color: whitesmoke;
+}
+.main h6 {
+  border: none !important;
+}
+@media screen and (max-width: 480px) {
+  .boxes .box1 h6 {
+    border: black solid 0.5px;
+    z-index: 1;
+    width: 15rem;
+    padding: 1.5rem 0.5rem;
+    text-align: left;
+    margin-top: 0.7rem;
+
+    display: inline-block;
+    margin-bottom: 4rem;
+  }
+  .boxes .box1 p {
+    font-size: 0.7rem !important;
+  }
+  .boxes .box1 img {
+    height: 1.5rem;
+    border-radius: 50%;
+    width: 1.5rem;
+  }
+  .boxes .box2 h6 {
+    border: black solid 0.5px;
+    z-index: 1;
+    width: 15rem;
+    padding: 1.5rem 0.5rem;
+    text-align: left;
+    margin-top: 0.7rem;
+    display: inline-block;
+    margin-bottom: 4rem;
+  }
+  .boxes .box2 p {
+    font-size: 0.7rem !important;
+  }
+  .boxes .box2 img {
+    height: 1.5rem;
+    border-radius: 50%;
+    width: 1.5rem;
+  }
+  .textfield {
+    position: absolute;
+    z-index: 99;
+
+    // bottom: 2rem;
+    background-color: whitesmoke;
+  }
+}

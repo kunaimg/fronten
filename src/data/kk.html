@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Change "Choose File" Label</title>
+    <style>
+      /* Hide the default file input */
+      input[type="file"] {
+        display: none;
+      }
+
+      /* Style the custom file input label */
+      .custom-file-input-label {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Your custom-styled file input label -->
+    <label class="custom-file-input-label" for="fileInput"
+      >Upload Imageasdfadf</label
+    >
+    <!-- Add a hidden file input with a unique ID -->
+    <input
+      type="file"
+      accept="image/*"
+      id="fileInput"
+      onchange="handleFileInputChange(event)"
+      style="display: none"
+    />
+
+    <!-- Display the selected file name (optional) -->
+    <div id="selectedFileName"></div>
+
+    <script>
+      // Function to handle file input change event
+      function handleFileInputChange(event) {
+        const input = event.target;
+        const fileName = input.files[0].name;
+        document.getElementById("selectedFileName").textContent =
+          "Selected file: " + fileName;
+      }
+    </script>
+  </body>
+</html>

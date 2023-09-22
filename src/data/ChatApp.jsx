@@ -27,7 +27,7 @@ function ChatApp() {
   }, [name, file]);
 
   useEffect(() => {
-    const socket = io("https://chatya.onrender.com/");
+    const socket = io("https://lastchat-ef8b.onrender.com/");
 
     socket.emit("newuser-join", {
       name: localStorage.getItem("name"),

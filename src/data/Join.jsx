@@ -23,7 +23,7 @@ function Join() {
       console.log(formData, selectedFile);
       formData.append("image", selectedFile);
 
-      fetch("https://lastchat-ef8b.onrender.com//upload", {
+      fetch("https://lastchat-ef8b.onrender.com/upload", {
         method: "POST",
         body: formData,
       })

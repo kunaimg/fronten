@@ -18,7 +18,7 @@ function Enter() {
       formData.append("image", selectedFile);
       formData.append("content", name);
 
-      fetch("http://localhost:3000/upload", {
+      fetch("https://chaat-cprl.onrender.com/upload", {
         method: "POST",
         body: formData,
       })

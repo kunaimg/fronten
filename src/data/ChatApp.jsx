@@ -21,17 +21,16 @@ function ChatApp() {
         chatContainerRef.current.scrollHeight;
     }
   }, []);
-  useEffect(() => {
-    setFile(localStorage.getItem("image"));
-    setName(localStorage.getItem("name"));
-  }, [name, file]);
 
   useEffect(() => {
-    const socket = io("https://chaat-cprl.onrender.com");
+    const socket = io("http://localhost:3000");
 
     socket.emit("newuser-join", {
       name: localStorage.getItem("name"),
-      image: localStorage.getItem("image"),
+    });
+    socket.on("allvalues", (data) => {
+      setName(data.name);
+      setFile(data.image);
     });
 
     setso(socket);
@@ -47,7 +46,7 @@ function ChatApp() {
                   </p>
                 </div>
                 <div class="col-3">
-                  <img src="https://chaat-cprl.onrender.com/uploads/${data.image}" alt="" />
+                  <img src="http://localhost:3000/uploads/${data.image}" alt="" />
                 </div>
               </div>
             </h6>
@@ -70,7 +69,7 @@ function ChatApp() {
                 </p>
               </div>
               <div class="col-3">
-                <img src="https://chaat-cprl.onrender.com/uploads/${data.image}" alt="" />
+                <img src="http://localhost:3000/uploads/${data.image}" alt="" />
               </div>
             </div>
           </h6>
@@ -92,7 +91,7 @@ function ChatApp() {
                   </p>
                 </div>
                 <div class="col-3">
-                  <img src="https://chaat-cprl.onrender.com/uploads/${data.image}" alt="" />
+                  <img src="http://localhost:3000/uploads/${data.image}" alt="" />
                 </div>
               </div>
             </h6>
@@ -107,7 +106,7 @@ function ChatApp() {
   }, []);
   function submit() {
     so.emit("send", message);
-    setFile(file);
+
     $(".boxes").append(`
     <div class="box2">
       <h6>
@@ -118,7 +117,7 @@ function ChatApp() {
             </p>
           </div>
           <div class="col-3">
-            <img src="https://chaat-cprl.onrender.com/uploads/${file}" alt="" />
+            <img src="http://localhost:3000/uploads/${file}" alt="" />
           </div>
         </div>
       </h6>
@@ -166,7 +165,7 @@ function ChatApp() {
                     </div>
                     <div className="col-3">
                       <img
-                        src={`https://chaat-cprl.onrender.com/uploads/${file}`}
+                        src={`http://localhost:3000/uploads/${file}`}
                         alt=""
                       />
                     </div>

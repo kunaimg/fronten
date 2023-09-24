@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.box1 img {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  border: solid 0.1px gray;
+  box-shadow: 0 0 0.3px 0 gray;
+}
+.box1 {
+  width: 25%;
+  margin-left: auto;
+  padding: 1rem 0.3rem;
+  box-shadow: 0 0 4px 0 gray;
+  background-color: #d9fdd3;
+  border-radius: 5px;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+.box1 .col-8 h6 {
+  margin-top: 0.7rem;
+}
+.box2 img {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  border: solid 0.1px gray;
+  box-shadow: 0 0 0.3px 0 gray;
+}
+.box2 {
+  width: 25%;
+
+  padding: 1rem 0.3rem;
+  box-shadow: 0 0 4px 0 gray;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+.box2 .col-8 h6 {
+  margin-top: 0.7rem;
+}
+.container-fluid .boxes {
+  height: 90vh;
+  overflow-y: scroll;
+}
+.container-fluid .boxes {
+  padding: 0 2rem;
+}
+::-webkit-scrollbar {
+  width: 0;
+}
+.box3 img {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  border: solid 0.1px gray;
+  box-shadow: 0 0 0.3px 0 gray;
+}
+.box3 {
+  width: 25%;
+  margin: 0 auto;
+  padding: 1rem 0.9rem;
+  box-shadow: 0 0 4px 0 gray;
+  background-color: #19c37d;
+  border-radius: 5px;
+  margin-top: 2rem;
+  position: sticky;
+  top: 0;
+}
+.box3 .col-8 h3 {
+  font-size: 1.2rem;
+  margin-top: 0.8rem;
+}
+.field {
+  margin-top: 0;
+  background-color: white;
+}
+@media screen and (max-width: 1250px) {
+  .box1,
+  .box2,
+  .box3 {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .box1,
+  .box2,
+  .box3 {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .box1,
+  .box2,
+  .box3 {
+    width: 55%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .box1,
+  .box2,
+  .box3 {
+    width: 60%;
+  }
+  .field {
+    margin-top: -1.5rem !important;
+    background-color: white;
+  }
+}
+@media screen and (max-width: 576px) {
+  .box1,
+  .box2,
+  .box3 {
+    width: 70%;
+  }
+  .box3 {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .box1,
+  .box2,
+  .box3 {
+    width: 90%;
+  }
+  .box3 {
+    width: 100%;
+  }
+  .field {
+    margin-top: -2rem !important;
+    background-color: white;
+  }
+}
+@media screen and (max-width: 400px) {
+  .col-8 h3 {
+    font-size: 0.9rem !important;
+    font-weight: 700;
+  }
+  .box1,
+  .box2,
+  .box3 {
+    width: 80%;
+  }
+  .box1 img,
+  .box2 img,
+  .box3 img {
+    height: 2rem;
+    width: 2rem;
+  }
+  .box1 h6,
+  .box2 h6,
+  .box3 h6 {
+    font-size: 0.8rem;
+    margin-left: 2rem;
+  }
+  .box3 {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 340px) {
+  .col-8 h3 {
+    font-size: 0.8rem !important;
+    font-weight: 700;
+  }
+  .box1,
+  .box2,
+  .box3 {
+    width: 90%;
+  }
+  .box1 h6,
+  .box2 h6,
+  .box3 h6 {
+    font-size: 0.6rem;
+    margin-left: 2rem;
+  }
+  .box3 {
+    width: 100%;
+  }
+}
+.idwork {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

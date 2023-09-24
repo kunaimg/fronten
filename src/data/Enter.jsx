@@ -2,25 +2,21 @@ import { TextField } from "@mui/material";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-function Join() {
+function Enter() {
   const navigate = useNavigate();
-  const [name, setName] = useState();
-  const [image, setImage] = useState();
   const [selectedFile, setSelectedFile] = useState(null);
+  const [name, setName] = useState();
   const handleFileChange = (e) => {
-    setImage(e.target.files[0].name);
     setSelectedFile(e.target.files[0]);
   };
+
   function valid(e) {
     e.preventDefault();
-    if (name && image) {
-      if (!selectedFile) {
-        return;
-      }
-
+    if (name && selectedFile) {
       const formData = new FormData();
 
       formData.append("image", selectedFile);
+      formData.append("content", name);
 
       fetch("http://localhost:3000/upload", {
         method: "POST",
@@ -28,21 +24,22 @@ function Join() {
       })
         .then((response) => response.text())
         .then((data) => {
-          // LocalStorage ko clear karne ka code
           data = JSON.parse(data);
+          sessionStorage.setItem("name", name);
+          sessionStorage.setItem("image", data.image);
 
-          localStorage.setItem("image", data.image);
+          navigate("/join");
         })
         .catch((error) => {
           console.error("Error:", error);
         });
-      navigate("/chatapp");
+      console.log("6575767");
     } else {
       alert("please fill valid infomration");
     }
   }
   return (
-    <div>
+    <div style={{ height: "100vh" }}>
       {" "}
       <button
         type="button"
@@ -76,7 +73,6 @@ function Join() {
               <TextField
                 label={"enter user Name"}
                 onChange={(e) => {
-                  localStorage.setItem("name", e.target.value);
                   setName(e.target.value);
                 }}
                 fullWidth
@@ -103,7 +99,7 @@ function Join() {
                 class="btn btn-primary"
                 onClick={valid}
               >
-                Create
+                Create Profile
               </button>
             </div>
           </div>
@@ -113,4 +109,4 @@ function Join() {
   );
 }
 
-export default Join;
+export { Enter };
